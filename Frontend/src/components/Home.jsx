@@ -5,7 +5,6 @@ import { ArrowRightCircle } from 'react-bootstrap-icons';
 import { useState, useEffect } from "react";
 
 import headerImg from '../assets/img/piamon.png';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom' ;
 
 
  
@@ -52,7 +51,8 @@ const Home = () => {
     }
   }
   return (
-   <React> 
+   
+
     <section  className="banner" id="home">
 
   <Container>
@@ -77,8 +77,8 @@ Join us on our journey as we continue to create games that ignite imagination an
     </Container>
   
     </section>
-    
-</React>
+
+
   )
 }
 
