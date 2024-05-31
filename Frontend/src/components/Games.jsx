@@ -5,6 +5,7 @@ import GameImg3 from "../assets/img/GameImg3.png";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import CardWithGame from './CardWithGame';
 import backGroundImg from "../assets/img/banner-bg.jpg"
+import { Link } from 'react-router-dom';
 
 const Games = () => {
     const projects = [
@@ -13,16 +14,19 @@ const Games = () => {
           title: "Tales of ShadowGrad",
           description: "Immersive fantasy rpg made by Tadeas Pirich",
           imgUrl: GameImg3,
+          linkUrl:  "https://github.com/TadeasPir/TalesOfShadowGrad" ,
         },
         {
-          title: "Pepa Game",
-          description: "game made by Josef Vetrovsky",
+          title: "Inner Demons",
+          description: "Suspenseful 2D adveture made by Josef Vetrovsky",
           imgUrl: GameImg2,
+          linkUrl:  "https://github.com/kakalasek/InnerDemonsGame" ,
         },
         {
-          title: "Marie Game",
+          title: "Marie's Game",
           description: "game made by Marie Kapucianova",
           imgUrl: GameImg1,
+          linkUrl:  "https://github.com/" ,
         },
       ];
     
@@ -49,10 +53,12 @@ Thank you for joining us on this journey. Your support and feedback inspire us t
                             {
                               projects.map((project, index) => {
                                 return (
+                                    
                                   <CardWithGame
                                     key={index}
                                     {...project}
                                     />
+                                    
                                 )
                               })
                             }

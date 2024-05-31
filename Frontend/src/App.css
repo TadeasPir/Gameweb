@@ -368,7 +368,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, rgba(110, 170, 54, 0.5) -5.91%, rgba(163, 2, 169, 0.5) 111.58%);
+    background: linear-gradient(90.21deg, rgba(54, 114, 170, 0.5) -5.91%, rgba(163, 2, 169, 0.5) 111.58%);
     top: 0;
     left: 0;
     z-index: -1;
@@ -412,6 +412,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 100%;
 }
 .proj-txtx {
+  color: #ffffff;
+  
   position: absolute;
   text-align: center;
   top: 65%;
@@ -422,6 +424,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
 }
 .proj-imgbx:hover .proj-txtx {
+  
   top: 50%;
   opacity: 1;
 }
