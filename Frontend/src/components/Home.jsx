@@ -1,15 +1,14 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-import TrackVisibility from 'react-on-screen';
+
 import { useState, useEffect } from "react";
 
 import headerImg from '../assets/img/piamon.png';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom' ;
 
 
-
-import "animate.css"
-
+ 
 const Home = () => {
 
   const [loopNum, setLoopNum] = useState(0);
@@ -53,6 +52,7 @@ const Home = () => {
     }
   }
   return (
+   <React> 
     <section  className="banner" id="home">
 
   <Container>
@@ -77,8 +77,8 @@ Join us on our journey as we continue to create games that ignite imagination an
     </Container>
   
     </section>
-
-   
+    
+</React>
   )
 }
 

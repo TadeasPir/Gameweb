@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import logo from '../assets/img/logo.png';
+
 import Col  from 'react-bootstrap/Col';
 
 
@@ -37,14 +37,14 @@ const onUpdateActiveLink = (value) => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
        
-        <Nav.Link href="#Home" className={activeLink === 'home' ? 'active navbar-link' :  'navbar-link' } onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-          <Nav.Link href="#About" className={activeLink === 'about' ? 'active navbar-link' :  'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About us</Nav.Link>
+        <Nav.Link href="/home" className={activeLink === 'home' ? 'active navbar-link' :  'navbar-link' } onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+          <Nav.Link href="/download" className={activeLink === 'download' ? 'active navbar-link' :  'navbar-link'} onClick={() => onUpdateActiveLink('download')}>download</Nav.Link>
          
         </Nav>
       </Navbar.Collapse>
       <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
       
-          <Nav.Link href="#Login" className={activeLink === 'login' ? 'active navbar-link' :  'navbar-link'} onClick={() => onUpdateActiveLink('login')}>Login</Nav.Link>
+          <Nav.Link href="/Login" className={activeLink === 'login' ? 'active navbar-link' :  'navbar-link'} onClick={() => onUpdateActiveLink('login')}>Login</Nav.Link>
        
         </Navbar.Collapse>
     </Container>
