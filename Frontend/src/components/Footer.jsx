@@ -15,7 +15,6 @@ const Footer = () => {
             <img src={logo} alt="Logo"  className='logo'/>
           </Col>
         <Col size={12} sm={6} className="text-center text-sm-end">
-          
           <p>By Tadeas Pirich, Josef Vetrovsky, Marie Kapucianova. All Rights Reserved</p>
         </Col>
       </Row>

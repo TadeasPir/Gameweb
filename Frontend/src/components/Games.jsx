@@ -39,12 +39,12 @@ const Games = () => {
                  
                     <h2>Our games</h2>
                     <p>Our games are crafted with an immense amount of passion, reflecting the dedication and love we pour into every aspect of development. From the initial concept sketches to the final lines of code, our team is driven by a deep-seated enthusiasm for creating immersive and unforgettable gaming experiences.
-<br/>
-This passion fuels our creativity, pushing us to explore new ideas, experiment with innovative mechanics, and fine-tune every detail to ensure our games resonate with players. It's not just about making games; it's about sharing our dreams, stories, and artistic vision with the world.
-<br/>
-Every character we design, every world we build, and every challenge we create is a testament to our commitment to excellence. We believe that when games are made with true passion, it translates into an experience that players can feel, enjoy, and remember.
-<br/>
-Thank you for joining us on this journey. Your support and feedback inspire us to keep pushing the boundaries and creating games that are not just played, but cherished.</p>
+                    <br/>
+                    This passion fuels our creativity, pushing us to explore new ideas, experiment with innovative mechanics, and fine-tune every detail to ensure our games resonate with players. It's not just about making games; it's about sharing our dreams, stories, and artistic vision with the world.
+                    <br/>
+                    Every character we design, every world we build, and every challenge we create is a testament to our commitment to excellence. We believe that when games are made with true passion, it translates into an experience that players can feel, enjoy, and remember.
+                    <br/>
+                    Thank you for joining us on this journey. Your support and feedback inspire us to keep pushing the boundaries and creating games that are not just played, but cherished.</p>
                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
                       
                       <Tab.Content id="slideInUp" >
