@@ -5,6 +5,7 @@ import { ArrowRightCircle } from 'react-bootstrap-icons';
 import { useState, useEffect } from "react";
 
 import headerImg from '../assets/img/piamon.png';
+import { Link } from 'react-router-dom';
 
 
  
@@ -66,7 +67,11 @@ const Home = () => {
 At TSL, we value community and collaboration, and we strive to connect with players through our shared love of games. Whether you’re exploring fantastical worlds, solving intricate puzzles, or embarking on epic adventures, our games are designed to inspire and entertain.
 <br/>
 Join us on our journey as we continue to create games that ignite imagination and bring joy to gamers around the world. Thank you for being part of our story!</p>
-      <button onClick={ () => console.log('downloasds')}>Downloads <ArrowRightCircle size={25} /></button>
+<Link to="downloads">
+<button >Download <ArrowRightCircle size={25} /></button>
+</Link>
+      
+     
       </Col>
       <Col xs={12} md={6} xl={5}>
       <img  src={headerImg}  alt="piamon"/>
