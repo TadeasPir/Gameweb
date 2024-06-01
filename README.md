@@ -24,16 +24,13 @@ If you want to manage your website in a local web development environment, you'l
 Once you've found a home for your forked repository, clone it.
 
 ## Vite install
-Install Vite
-Vite is Next Generation Frontend Tooling
 
-continue with the vite set up 
-[Vite set up](https://vitejs.dev/guide/).
-after setting up vite install additional depencecies
-`` npm install react-bootstrap bootstrap``
-``npm install react-router-dom ``
+go to / frontend
+`` npm i``
 
-now do ``npm run dev`` in terminal inside your folder and you should see something like this:
+
+
+now do ``npm run dev`` in terminal inside your frontend and you should see something like this:
 ```
   VITE v5.2.11  ready in 363 ms
 
