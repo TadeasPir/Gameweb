@@ -23,7 +23,7 @@ If you want to manage your website in a local web development environment, you'l
 
 Once you've found a home for your forked repository, clone it.
 
-## Vite install
+## Install
 
 go to / frontend
 `` npm i``
