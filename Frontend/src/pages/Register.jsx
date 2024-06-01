@@ -1,17 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
-
-const Login = () => {
-    
+const Register = () => {
   return (
+ 
+    
     <div className="Auth-form-container">
       <form className="Auth-form">
         <div className="Auth-form-content">
-          <h3 className="Auth-form-title">Sign In</h3>
+          <h3 className="Auth-form-title">Sign Up</h3>
           <div className="text-center">
-              Not registered yet?<Link to="/register" className='sign'> Sign Up?</Link>
+            Already registered?<Link to="/login" className='sign'> Sign Up?</Link>
             </div>
           <div className="form-group mt-3">
             <label>Email address</label>
@@ -34,11 +33,13 @@ const Login = () => {
               Submit
             </button>
           </div>
-          
+       
         </div>
       </form>
     </div>
+    
+
   )
 }
 
-export default Login
+export default Register

@@ -33,7 +33,7 @@ const ReviewForDownload = () => {
                     <div className="col-12">
                         <div className="review-bx wow zoomIn">
                             <h2>Ratings</h2>
-                            <p>Our games have amaizing ratings from multiple organizations.</p>
+                            <p>Our games have amazing ratings from multiple organizations.</p>
                             <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme review-slider">
                                 <div className="item">
                                     <img src={meter1} alt="Image" />
