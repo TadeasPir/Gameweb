@@ -497,7 +497,6 @@ label {
 }
 
 
-
 /************ Footer Css ************/
 .footer {
   padding: 0 0 50px 0;
@@ -516,4 +515,10 @@ label {
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+
+/************ Biscuits Css ************/
+.cookie-modal{
+color: #000000;
 }
