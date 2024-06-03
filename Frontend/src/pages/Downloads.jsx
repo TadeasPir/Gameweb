@@ -6,7 +6,6 @@ import ReviewForDownload from '../components/ReviewForDownload';
 const Downloads = () => {
   return (
     <>
-    
     <Games/>
     <ReviewForDownload/>
     </>
