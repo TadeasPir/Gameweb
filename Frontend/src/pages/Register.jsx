@@ -26,6 +26,14 @@ const Register = () => {
     <div className="Auth-form-container">
       <form className="Auth-form">
         <div className="Auth-form-content">
+        <Alert variant="danger"
+    show={show} 
+ onClose={() => setShow(false)} dismissible>
+     <Alert.Heading>Oh snap! this email already has account!</Alert.Heading>
+     <p>
+      You know you could be a little bit more creative. Here are some ideas. <Alert.Link href="https://brandsnag.com/email-name-generator"> check this</Alert.Link>.
+     </p>
+   </Alert>
           <h3 className="Auth-form-title">Sign Up</h3>
           <div className="text-center">
             Already registered?

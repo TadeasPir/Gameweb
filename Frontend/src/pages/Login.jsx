@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import HttpClient from "../components/HttpClient";
-
+import { Alert } from "react-bootstrap";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [show, setShow] = useState(false);
 
   const logInUser = async (e) => {
     try {
@@ -15,14 +16,28 @@ const Login = () => {
 
       window.location.href = "/";
     } catch (err) {
-      alert("Invalid credentials");
+      setShow(true)
     }
   };
 
   return (
+    <div>
+     
     <div className="Auth-form-container">
+   
+   
+     
       <form className="Auth-form">
+    
         <div className="Auth-form-content">
+        <Alert variant="danger"
+    show={show} 
+ onClose={() => setShow(false)} dismissible>
+     <Alert.Heading>Oh snap! your password or email is invalid!</Alert.Heading>
+     <p>
+      this is sign of severe lack of skill for more info <Alert.Link href="https://www.urbandictionary.com/define.php?term=skill+issue"> check this</Alert.Link>.
+     </p>
+   </Alert>
           <h3 className="Auth-form-title">Sign In</h3>
           <div className="text-center">
             Not registered yet?
@@ -62,6 +77,9 @@ const Login = () => {
           </div>
         </div>
       </form>
+    
+    </div>
+
     </div>
   );
 };

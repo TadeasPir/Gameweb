@@ -444,6 +444,9 @@ label {
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
+  width: 400px;
+  height: 400px;
+
 }
 .proj-imgbx::before {
   content: "";
