@@ -14,7 +14,7 @@ const Register = () => {
         password,
       });
 
-      window.location.href = "/login"
+      window.location.href = "/"
 
     } catch (err) {
       if (err.response.status === 409){
