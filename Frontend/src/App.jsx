@@ -8,21 +8,38 @@ import Downloads from './pages/Downloads';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Profile from "./pages/Profile";
-
 import InvalidPage from './pages/InvalidPage';
-const router = createBrowserRouter(
+
+import { useState, useEffect } from "react";
+import HttpClient from "./components/HttpClient";
+
+
+function App() {
+  const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const resp = await HttpClient.get("//localhost:8080/@me");
+
+        setUser(resp.data)
+      } catch (e) {
+      } 
+    })();
+  }, []);
+  
+  const router = createBrowserRouter(
   createRoutesFromElements(
   <Route path='/' element={<MainLayout/>}>
   <Route index element={<HomePage/>}/>
   <Route path='/downloads' element={<Downloads/>}/>
   <Route path='/login' element={<Login/>}/>
   <Route path='/register' element={<Register/>}/>
-  <Route path="/profile" element={<Profile />} />
+  <Route path="/profile" element={user ? <Profile /> : <InvalidPage/>} />
   <Route path='*' element={<InvalidPage/>}/>
   </Route>
   ))
 
-function App() {
   return <RouterProvider router={router} />;
 }
 
