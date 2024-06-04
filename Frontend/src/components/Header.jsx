@@ -5,11 +5,25 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-
 import Col  from 'react-bootstrap/Col';
 
+import HttpClient from "./HttpClient";
 
 const Header = () => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const resp = await HttpClient.get("//localhost:8080/@me");
+
+        setUser(resp.data);
+      } catch (e) {
+        console.log("Not authenticated");
+      }
+    })();
+  }, []);
+
 const [activeLink, setActiveLink] = useState('home');
 const [scrolled,seScrolled ] = useState(false);
 
@@ -44,8 +58,12 @@ const onUpdateActiveLink = (value) => {
         </Nav>
       </Navbar.Collapse>
       <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+
+        {user != null ? (
+          <Nav.Link href="/Profile" className={activeLink === 'profile' ? 'active navbar-link' :  'navbar-link'} onClick={() => onUpdateActiveLink('profile')}>Profile</Nav.Link>
+        ) : <Nav.Link href="/Login" className={activeLink === 'login' ? 'active navbar-link' :  'navbar-link'} onClick={() => onUpdateActiveLink('login')}>Login</Nav.Link>}
       
-          <Nav.Link href="/Login" className={activeLink === 'login' ? 'active navbar-link' :  'navbar-link'} onClick={() => onUpdateActiveLink('login')}>Login</Nav.Link>
+          
        
         </Navbar.Collapse>
     </Container>
