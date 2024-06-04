@@ -19,7 +19,6 @@ const Header = () => {
 
         setUser(resp.data);
       } catch (e) {
-        console.log("Not authenticated");
       }
     })();
   }, []);

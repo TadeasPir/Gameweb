@@ -15,7 +15,7 @@ const Login = () => {
 
       window.location.href = "/";
     } catch (err) {
-      alert("WRONG");
+      alert("Invalid credentials");
     }
   };
 
