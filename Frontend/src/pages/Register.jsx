@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import HttpClient from "../components/HttpClient";
-
+import { Alert } from "react-bootstrap";
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const [show, setShow] = useState(false);
+  
   const registerUser = async (e) => {
     try {
       const resp = await HttpClient.post("//localhost:8080/register", {
@@ -17,7 +18,7 @@ const Register = () => {
 
     } catch (err) {
       if (err.response.status === 409){
-        alert("User exists")
+        setShow(true)
       }
     }
   };
