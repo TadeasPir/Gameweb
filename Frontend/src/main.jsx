@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import posthog from 'posthog-js';
+import posthog from 'posthog-js';``
 posthog.init('phc_m7kVXRRdBteamWzWatO4L6muXEQvoZXnFpSfREfwJyO',
     {
         api_host: 'https://us.i.posthog.com',

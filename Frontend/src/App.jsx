@@ -7,6 +7,8 @@ import  {Route, createBrowserRouter, createRoutesFromElements,RouterProvider} fr
 import Downloads from './pages/Downloads';
 import Login from './pages/Login';
 import Register from './pages/Register';
+
+import InvalidPage from './pages/InvalidPage';
 const router = createBrowserRouter(
   createRoutesFromElements(
   <Route path='/' element={<MainLayout/>}>
@@ -14,6 +16,7 @@ const router = createBrowserRouter(
   <Route path='/downloads' element={<Downloads/>}/>
   <Route path='/login' element={<Login/>}/>
   <Route path='/register' element={<Register/>}/>
+  <Route path='*' element={<InvalidPage/>}/>
   </Route>
   ))
 function App() {
