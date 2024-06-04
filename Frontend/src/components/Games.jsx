@@ -1,6 +1,6 @@
 import React from 'react'
-import GameImg1 from "../assets/img/GameImg3.png";
-import GameImg2 from "../assets/img/GameImg3.png";
+import GameImg1 from "../assets/img/GameImg4.png";
+import GameImg2 from "../assets/img/GameImg2.png";
 import GameImg3 from "../assets/img/GameImg3.png";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import CardWithGame from './CardWithGame';
