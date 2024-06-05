@@ -58,3 +58,7 @@ start backend
 `` python3 app.py ``
 
 ideally set Debug mode in flask to false and remove strict mode from frontend
+### division of work
+Tadeas - Frontend (Main dev)
+Josef - Backend
+Marie - Frontend (Ssecondary dev)
