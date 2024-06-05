@@ -28,6 +28,9 @@ Once you've found a home for your forked repository, clone it.
 go to / frontend
 `` npm i``
 
+if needed, install some dependencies manually with `` npm install {name of dependency} ``
+the name of dependency can be found in error code
+
 
 
 now do ``npm run dev`` in terminal inside your frontend and you should see something like this:
