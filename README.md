@@ -69,4 +69,8 @@ Tadeas - Frontend (Main dev)
 Josef - Backend
 
 Marie - Frontend (Ssecondary dev)
+
+
+
+## Showcase of home page 
 ![image](https://github.com/TadeasPir/Gameweb/blob/main/image.png)
