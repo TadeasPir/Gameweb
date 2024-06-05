@@ -53,6 +53,10 @@ start redis
 
 `` systemctl start redis-server ``
 
+create .env file in / backend directory with your secret key
+
+`` SECRET_KEY={your secret key} ``
+
 start backend
 
 `` python3 app.py ``
