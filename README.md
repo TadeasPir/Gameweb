@@ -29,7 +29,20 @@ go to / frontend
 `` npm i``
 
 if needed, install some dependencies manually with `` npm install {name of dependency} ``
-the name of dependency can be found in error code
+
+the name of the dependency can be found in error code
+
+go to / backend
+
+`` pip install -r dependencies ``
+
+start redis
+
+`` systemctl start redis-server ``
+
+start backend
+
+`` python3 app.py ``
 
 
 
