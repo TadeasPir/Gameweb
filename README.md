@@ -11,7 +11,9 @@
 - vite
 - react
 - react router
-
+  
+## Project info:
+This web is a project where we made a web for indie game dev studio TSL 
 ## Installation of the project:
 ### Fork the `github/Tadeaspir/gameweb` repo
 
