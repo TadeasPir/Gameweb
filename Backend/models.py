@@ -6,6 +6,7 @@ db = SQLAlchemy()
 def get_uuid():
     return uuid4().hex
 
+# creates a simple database for users
 class User(db.Model):
     __tablename__ = "users"
     id = db.Column(db.String(32), primary_key=True, unique=True, default=get_uuid)
