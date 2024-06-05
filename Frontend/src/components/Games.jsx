@@ -23,7 +23,7 @@ const Games = () => {
           linkUrl:  "https://github.com/kakalasek/InnerDemonsGame" ,
         },
         {
-          title: "Marie's Game",
+          title: "The",
           description: "game made by Marie Kapucianova",
           imgUrl: GameImg1,
           linkUrl:  "https://github.com/" ,

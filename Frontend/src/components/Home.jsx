@@ -65,7 +65,7 @@ const Home = () => {
           <Col>
             <span className="tagline">Tales of Shadowgrad</span>
             <h1>
-              {"we "}
+              {"We "}
               <span className="wrap">{text}</span>
             </h1>
             <p>
