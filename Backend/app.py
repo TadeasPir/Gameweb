@@ -68,11 +68,7 @@ def login_user():
     global current_email
     global wrong_counter
 
-    if current_email == email:
-        is_the_same = True
-    else:
-        is_the_same = False
-    #is_the_same = current_email == email
+    is_the_same = current_email == email
 
     current_email = email
 
@@ -88,7 +84,7 @@ def login_user():
         
         if wrong_counter >=3:
             f = open("Backend\logs\logs.txt", "a")
-            f.write(f"User {email} unsuccessfully logged {wrong_counter} times ")
+            f.write(f"User {email} unsuccessfully logged {wrong_counter} times\n")
             f.close()
 
 
