@@ -12,6 +12,8 @@ bcrypt = Bcrypt(app)    # So bcrypt will work or smt
 CORS(app, supports_credentials=True)    # Enabling CORS
 server_session = Session(app)   # Enabling server-side sessions
 db.init_app(app)
+current_email = ""
+wrong_counter = 0
 
 with app.app_context():
     db.create_all() # Creating database
@@ -37,6 +39,8 @@ def register_user():
     email = request.json["email"]
     password = request.json["password"]
 
+   
+
     user_exists = User.query.filter_by(email=email).first() is not None # check if user exists
 
     if user_exists: # if user already exists, send and error
@@ -61,13 +65,36 @@ def login_user():
     email = request.json["email"]
     password = request.json["password"]
 
+    global current_email
+    global wrong_counter
+
+    if current_email == email:
+        is_the_same = True
+    else:
+        is_the_same = False
+    #is_the_same = current_email == email
+
+    current_email = email
+
     user = User.query.filter_by(email=email).first()    # check if user exists
 
     if user is None:    
         return jsonify({"error": "Unauthorized"}), 401
 
     if not bcrypt.check_password_hash(user.password, password): # check if the password is correct
+      
+        if is_the_same:
+          wrong_counter +=1
+        
+        if wrong_counter >=3:
+            f = open("Backend\logs\logs.txt", "a")
+            f.write(f"User {email} unsuccessfully logged {wrong_counter} times ")
+            f.close()
+
+
         return jsonify({"error": "Unauthorized"}), 401
+    
+    wrong_counter = 0
     
     session["user_id"] = user.id    # authenticate the user
 

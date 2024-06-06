@@ -6,8 +6,20 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [show, setShow] = useState(false);
+  const [invalidEmail, setInvalidEmail] = useState(false);
+
 
   const logInUser = async (e) => {
+
+      
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if(!emailRegex.test(email)){
+     setInvalidEmail(true); 
+     return;
+    }else{ 
+     setInvalidEmail(false);
+    } 
+
     try {
       const resp = await HttpClient.post("//localhost:8080/login", {
         email,
@@ -36,6 +48,15 @@ const Login = () => {
      <Alert.Heading>Oh snap! your password or email is invalid!</Alert.Heading>
      <p>
       this is sign of severe lack of skill for more info <Alert.Link href="https://www.urbandictionary.com/define.php?term=skill+issue"> check this</Alert.Link>.
+     </p>
+   </Alert>
+
+   <Alert variant="danger"
+    show={invalidEmail} 
+ onClose={() => setInvalidEmail(false)} dismissible>
+     <Alert.Heading>Nu uh!</Alert.Heading>
+     <p>
+      Not an email! <Alert.Link href="https://www.urbandictionary.com/define.php?term=email"> Need a hand?</Alert.Link>.
      </p>
    </Alert>
           <h3 className="Auth-form-title">Sign In</h3>

@@ -6,8 +6,17 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [show, setShow] = useState(false);
-  
+  const [invalidEmail, setInvalidEmail] = useState(false);
+
   const registerUser = async (e) => {
+
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+   if(!emailRegex.test(email)){
+    setInvalidEmail(true); 
+    return;
+   }else{ 
+    setInvalidEmail(false);
+   } 
     try {
       const resp = await HttpClient.post("//localhost:8080/register", {
         email,
@@ -30,11 +39,21 @@ const Register = () => {
         <Alert variant="danger"
     show={show} 
  onClose={() => setShow(false)} dismissible>
-     <Alert.Heading>Oh snap! this email already has account!</Alert.Heading>
+     <Alert.Heading>Oh snap! This email already has account!</Alert.Heading>
      <p>
       You know you could be a little bit more creative. Here are some ideas. <Alert.Link href="https://brandsnag.com/email-name-generator"> check this</Alert.Link>.
      </p>
    </Alert>
+
+   <Alert variant="danger"
+    show={invalidEmail} 
+ onClose={() => setInvalidEmail(false)} dismissible>
+     <Alert.Heading>Nu uh!</Alert.Heading>
+     <p>
+      Not an email! <Alert.Link href="https://www.urbandictionary.com/define.php?term=email"> Need a hand?</Alert.Link>.
+     </p>
+   </Alert>
+
           <h3 className="Auth-form-title">Sign Up</h3>
           <div className="text-center">
             Already registered?
