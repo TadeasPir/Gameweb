@@ -77,7 +77,7 @@ Josef - Backend
 
 Marie - Frontend (Ssecondary dev)
 
-If you like our work feel free to star our project.
+### If you like our work feel free to star our project.
 
 
 
