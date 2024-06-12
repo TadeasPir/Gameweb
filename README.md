@@ -51,8 +51,7 @@ go to / backend
 
 
 
-[for windows users follow this guide to install redis]([https://link-url-here.org](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/))
-
+[for windows users follow this guide to install redis](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/)
 
 start redis
 
