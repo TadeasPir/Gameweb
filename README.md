@@ -49,6 +49,7 @@ go to / backend
 
 `` pip install -r dependencies ``
 
+[for windows users follow this guide to install redis](https://www.microsoft.com/store/productId/9NRWMJP3717K?ocid=pdpshare)
 
 
 [for windows users follow this guide to install redis](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/)
