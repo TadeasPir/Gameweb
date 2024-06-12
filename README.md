@@ -49,6 +49,11 @@ go to / backend
 
 `` pip install -r dependencies ``
 
+
+
+[for windows users follow this guide to install redis]([https://link-url-here.org](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/))
+
+
 start redis
 
 `` systemctl start redis-server ``
