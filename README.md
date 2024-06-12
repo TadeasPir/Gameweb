@@ -44,17 +44,19 @@ now do ``npm run dev`` in terminal inside your frontend and you should see somet
 ```
 
 folow the link.
-[for windows users follow this guide to install redis](https://www.microsoft.com/store/productId/9NRWMJP3717K?ocid=pdpshare)
+
 go to / backend
+[for windows users follow this guide to install redis](https://www.microsoft.com/store/productId/9NRWMJP3717K?ocid=pdpshare)
 
 `` pip install -r dependencies ``
 
 
 
 
-[for windows users follow this guide to install redis](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/)
+
 
 start redis
+[for windows users follow this guide to install redis](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/)
 
 `` systemctl start redis-server ``
 
