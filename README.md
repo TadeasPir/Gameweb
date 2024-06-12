@@ -46,7 +46,7 @@ now do ``npm run dev`` in terminal inside your frontend and you should see somet
 folow the link.
 
 go to / backend
-[for windows users follow this guide to install redis](https://www.microsoft.com/store/productId/9NRWMJP3717K?ocid=pdpshare)
+[python 3 installation for windows](https://www.microsoft.com/store/productId/9NRWMJP3717K?ocid=pdpshare)
 
 `` pip install -r dependencies ``
 
